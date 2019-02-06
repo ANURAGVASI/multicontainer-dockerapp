@@ -38,7 +38,7 @@ class App extends Component {
         <button onClick={this.addUser} >add user</button> 
         <br/>
         <br/>
-        <button onClick={this.getUsers} >list users</button>
+        <button onClick={this.getUsers} >List users</button>
         {
           this.state.users.map((user) => {
             return (
