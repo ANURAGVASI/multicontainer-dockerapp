@@ -9,7 +9,7 @@ before_install:
 script:
   - docker run vasianurag/multidockerapp-client npm run test -- --coverage
 
-after_sucess:
+after_success:
 
   # building production images
   - docker build -t vasianurag/multicontainer-docker-client ./client
