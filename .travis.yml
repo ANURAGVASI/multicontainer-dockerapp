@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t vasianurag/multidockerapp-client -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run vasianurag/multidockerapp-client npm run test -- --coverage
