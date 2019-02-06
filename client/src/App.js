@@ -34,6 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <p>Enter user name : </p>
         <input type="text" className="username" placeholder="name" />
         <button onClick={this.addUser} >add user</button> 
         <br/>
