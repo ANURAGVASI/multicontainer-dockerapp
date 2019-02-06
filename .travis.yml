@@ -9,17 +9,17 @@ before_install:
 script:
   - docker run vasianurag/multidockerapp-client npm run test -- --coverage
 
-after_success:
+# after_success:
 
-  # building production images
-  - docker build -t vasianurag/multicontainer-docker-client ./client
-  - build -t vasianurag/muticontainer-docker-server ./server
-  - build -t vasianurag/muticontainer-docker-nginx ./nginx
+#   # building production images
+#   - docker build -t vasianurag/multicontainer-docker-client ./client
+#   - docker build -t vasianurag/muticontainer-docker-server ./server
+#   - docker build -t vasianurag/muticontainer-docker-nginx ./nginx
 
-  # login to docker
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+#   # login to docker
+#   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-  # push images to github
-   - docker push vasianurag/multicontainer-docker-client
-   - docker push vasianurag/multicontainer-docker-server
-   - docker push vasianurag/multicontainer-docker-nginx
+#   # push images to github
+#    - docker push vasianurag/multicontainer-docker-client
+#    - docker push vasianurag/multicontainer-docker-server
+#    - docker push vasianurag/multicontainer-docker-nginx
