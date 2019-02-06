@@ -20,6 +20,6 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # push images to github
-   - docker push vasianurag/multicontainer-docker-client
-  #  - docker push vasianurag/multicontainer-docker-server
-  #  - docker push vasianurag/multicontainer-docker-nginx
+  - docker push vasianurag/multicontainer-docker-client
+  - docker push vasianurag/multicontainer-docker-server
+  - docker push vasianurag/multicontainer-docker-nginx
