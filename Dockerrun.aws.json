@@ -25,7 +25,7 @@
                     "containerPort":80
                 }
             ],
-            "links": ["client", "server"],
+            "links": ["client", "nodeserver"],
             "memory": 128
         }
     ]
