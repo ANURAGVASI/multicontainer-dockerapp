@@ -32,9 +32,20 @@ app.get("/", (req,res) => {
 
 app.get("/users", (req,res) => {
     console.log("in /users GET")
-    UserSchema.find({},(err,data) => {
-        res.send(data);
-    })
+    try{
+        UserSchema.find({},(err,data) => {
+            if(err){
+                res.send(err);
+            }
+            else{
+                res.send(data)
+            }
+        })
+    }
+    catch(e){
+        res.send(e);
+    }
+
 })
 
 app.post("/user", (req,res) => {
