@@ -9,9 +9,9 @@
             "memory": 128
         },
         {
-            "name": "server",
+            "name": "nodeserver",
             "image": "vasianurag/multicontainer-docker-server",
-            "hostname": "client",
+            "hostname": "nodeserver",
             "essential": false,
             "memory": 128
         },
