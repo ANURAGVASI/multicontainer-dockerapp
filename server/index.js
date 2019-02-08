@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 const UserSchema = require("./models/user");
 
 // connecting to database
-mongoose.connect("mongodb://multicontainerappDB1:anurag61@docdb-2019-02-08-07-08-45.cluster-c17ern98ziqh.us-east-1.docdb.amazonaws.com:27017/sampleDB",
+mongoose.connect("mongodb://multicontainerappDB1:anurag61@docdb-2019-02-08-07-08-45.c17ern98ziqh.us-east-1.docdb.amazonaws.com:27017/?ssl_ca_certs=rds-combined-ca-bundle.pem",
   {useNewUrlParser: true, reconnectTries: 2, reconnectInterval:2000 },
   (err) => {
     if(err) {
